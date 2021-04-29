@@ -6,16 +6,16 @@
     transform-style: preserve-3d;
     -webkit-animation: rotate3d 8s linear infinite;
     animation: rotate3d 8s linear infinite;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 .coin__front {
     background-image: url("../images/laika-coin-front.png");
     background-size: cover;
     transform: translateZ(5px);
-    -moz-animation: spinHorizontal 3s infinite linear;
-    -o-animation: spinHorizontal 3s infinite linear;    
-    -webkit-animation: spinHorizontal 3s infinite linear;
-    animation: spinHorizontal 3s infinite linear;
+    -moz-animation: spinHorizontal 5s infinite linear;
+    -o-animation: spinHorizontal 5s infinite linear;    
+    -webkit-animation: spinHorizontal 5s infinite linear;
+    animation: spinHorizontal 5s infinite linear;
 }
 .coin__front:after, .coin__back:after {
     content: "";
@@ -27,19 +27,19 @@
     width: 300px;
     background: #fff;
     opacity: 0.3;
-    -moz-animation: spinHorizontal 3s infinite linear;
-    -o-animation: spinHorizontal 3s infinite linear;    
-    -webkit-animation: spinHorizontal 3s infinite linear;
-    animation: spinHorizontal 3s infinite linear;
+    -moz-animation: spinHorizontal 5s infinite linear;
+    -o-animation: spinHorizontal 5s infinite linear;    
+    -webkit-animation: spinHorizontal 5s infinite linear;
+    animation: spinHorizontal 5s infinite linear;
 }
 .coin__back {
     background-image: url("../images/laika-coin-back.png");
     background-size: cover;
     transform: translateZ(-5px) rotateY(180deg);
-    -moz-animation: spinHorizontal 3s infinite linear;
-    -o-animation: spinHorizontal 3s infinite linear;    
-    -webkit-animation: spinHorizontal 3s infinite linear;
-    animation: spinHorizontal 3s infinite linear;
+    -moz-animation: spinHorizontal 5s infinite linear;
+    -o-animation: spinHorizontal 5s infinite linear;    
+    -webkit-animation: spinHorizontal 5s infinite linear;
+    animation: spinHorizontal 5s infinite linear;
 }
 .coin__front, .coin__back {
     position: absolute;
