@@ -1,0 +1,74 @@
+.coin {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+    transform-style: preserve-3d;
+    -webkit-animation: rotate3d 8s linear infinite;
+    animation: rotate3d 8s linear infinite;
+    transition: all 0.3s;
+}
+.coin__front {
+    background-image: url("../images/laika-coin-front.png");
+    background-size: cover;
+    transform: translateZ(5px);
+    -moz-animation: spinHorizontal 3s infinite linear;
+    -o-animation: spinHorizontal 3s infinite linear;    
+    -webkit-animation: spinHorizontal 3s infinite linear;
+    animation: spinHorizontal 3s infinite linear;
+}
+.coin__front:after, .coin__back:after {
+    content: "";
+    position: absolute;
+    left: -75px;
+    bottom: 100%;
+    display: block;
+    height: 100px;
+    width: 300px;
+    background: #fff;
+    opacity: 0.3;
+    -moz-animation: spinHorizontal 3s infinite linear;
+    -o-animation: spinHorizontal 3s infinite linear;    
+    -webkit-animation: spinHorizontal 3s infinite linear;
+    animation: spinHorizontal 3s infinite linear;
+}
+.coin__back {
+    background-image: url("../images/laika-coin-back.png");
+    background-size: cover;
+    transform: translateZ(-5px) rotateY(180deg);
+    -moz-animation: spinHorizontal 3s infinite linear;
+    -o-animation: spinHorizontal 3s infinite linear;    
+    -webkit-animation: spinHorizontal 3s infinite linear;
+    animation: spinHorizontal 3s infinite linear;
+}
+.coin__front, .coin__back {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #94a8b1;
+}
+.coin__shadow {
+    position: absolute;
+    width: 150px;
+    height: 10px;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 50px 50px #000;
+    opacity: 0.125;
+    transform: rotateX(90deg) translateZ(-165px) scale(0.5);
+}
+@keyframes spinHorizontal {
+    0% { transform: rotateY(0deg); }
+    /* 10% { transform: rotateY(36deg); } */
+    25% { transform: rotateY(90deg); }
+    /* 30% { transform: rotateY(108deg); }
+    40% { transform: rotateY(144deg); } */
+    50% { transform: rotateY(180deg); }
+    /* 60% { transform: rotateY(216deg); } */
+    75% { transform: rotateY(270deg); }
+    /* 80% { transform: rotateY(288deg); }
+    90% { transform: rotateY(224deg); } */
+    100% { transform: rotateY(360deg); }
+}
